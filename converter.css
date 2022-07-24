@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+:root{
+    --primary:rgb(8, 52, 117);
+    --secondary: white;
+    --body: white;
+    --scroll-colorhover:rgb(3, 27, 63);
+    --font-color: rgb(3, 27, 63);
+    --container: white;
+}
+
+.dark-theme{
+    --primary:rgb(0, 0, 0);
+    --secondary: white;
+    --body: rgba(17, 17, 17, 0.877);
+    --scroll-colorhover:rgba(7, 6, 6, 0.877);
+    --font-color: white;
+    --container: #333;
+}
+
+body {
+    background-color: var(--body);
+}
+
+::-webkit-scrollbar{
+    background-color: transparent;
+    width: .9em;
+}
+
+::-webkit-scrollbar-track{
+    margin-block: .5em;
+    border-radius: 100vw;
+    
+}
+::-webkit-scrollbar-thumb{
+    border: .5px solid var(--font-color);
+    background-color: transparent;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--scroll-colorhover);
+}
+
+.header {
+    background-color: var(--primary);
+    color: var(--secondary);
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+}
+
+.h1-div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header button {    
+    border: none;
+    cursor: pointer;
+}
+
+.header .button-div {
+    background-color: var(--primary);
+}
+
+.header .button-div i {
+    font-size:36px;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.header h1,
+.header .button-div i{
+    padding: 1rem;
+}
+
+#converter-container {
+    color: var(--font-color);
+    max-width: 40rem;
+    margin: 5rem auto 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 0.5fr 2fr 1fr;
+    grid-template-areas: 
+    'top-left top-right'
+    'first-left first-right'
+    'second-left second-right'
+    'bot bot'
+    ;
+    border: 2px solid var(--font-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    background-color: var(--container);
+}
+
+.table5,
+.table3,
+.table1 {
+    padding: 1rem 0.7rem 0 1.5rem;
+}
+
+.table2,
+.table4,
+.table6 {
+    padding: 1rem 1.5rem 0 0.7rem;
+}
+
+.table7 {
+    padding: 0.7rem 0;
+}
+
+.table1 {
+    grid-area: top-left;
+}
+
+.table2 {
+    grid-area: top-right;
+}
+
+.table3 {
+    grid-area: first-left;
+}
+
+.table4 {
+    grid-area: first-right;
+}
+
+#lblresult,
+#unitsFrom,
+#unitsTo,
+#txtinput{
+    display: block;
+    padding: 0.375rem 0.75rem;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid var(--font-color);
+    background-color: var(--container);
+    color: var(--font-color);
+}
+
+#unitsFrom,
+#unitsTo {
+    text-align: center; 
+    font-size: 1.1rem;
+}
+
+#lblresult {
+    height: 30px;
+}
+.table5 {
+    grid-area: second-left;
+}
+
+.table5 select option,
+.table6 select option {
+    margin: 0.15rem;
+    padding: 0.2rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+select option:hover{
+    color: var(--secondary);
+    background-color: var(--primary);
+    transition: .3s;
+}
+.table6 {
+    grid-area: second-right;
+}
+
+.table7 {
+    grid-area: bot;
+    justify-self: center;
+}
+
+.table7 button{
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--font-color);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 10rem;
+    background-color: var(--container);
+    color: var(--font-color);
+
+}
+
+.table7 button:hover{
+    background-color:  var(--primary);
+    color: var(--secondary);
+    transition: .2s;
+}
+
+footer {
+    text-align: center;
+    color: var(--font-color);
+}

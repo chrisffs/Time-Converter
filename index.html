@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="converter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Time Converter</title>
+    <script src="converter.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="h1-div">
+            <h1>Time Converter</h1>
+        </div>
+        <div class="button-div">
+            <button onclick="dm()"><i class="fa fa-moon-o"></i></button>
+        </div>  
+    </header>
+    <div id="converter-container">
+        <div class="table1">
+            <h3>From</h3>
+        </div>
+        <div class="table2">
+            <h3>To</h3>
+        </div>
+        <div class="table3">
+            <input type="text" id="txtinput" required="">   
+        </div>
+        <div class="table4">
+            <span id="lblresult">0</span>
+        </div>
+        <div class="table5">
+            <select  id="unitsFrom" onchange="changest()" size="5">  
+                <option value="">Milisecond</option>
+                <option value="">Second</option>
+                <option value="">Minute</option>
+                <option value="">Hour</option>
+                <option value="">Day</option>
+                <option value="">Week</option>
+                <option value="">Month</option>
+                <option value="">Year</option>
+            </select>
+        </div>
+        <div class="table6">
+            <select  id="unitsTo" onchange="changests()" size="5">  
+                <option value="">Milisecond</option>
+                <option value="">Second</option>
+                <option value="">Minute</option>
+                <option value="">Hour</option>
+                <option value="">Day</option>
+                <option value="">Week</option>
+                <option value="">Month</option>
+                <option value="">Year</option>
+            </select>
+        </div>
+        <div class="table7">
+            <button onclick="convert()">Convert</button>
+        </div>
+    </div>
+    <footer>
+        <h4>by Yoshiyuki Canoy & Christian Noel Salvador</h4>
+    </footer>
+</body>
+</html>
